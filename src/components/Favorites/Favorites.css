@@ -31,3 +31,13 @@
     opacity: 0.9;
     transition: all 0.2s linear;
 }
+.favorites__list--item{
+    display: flex;
+    justify-content: space-between;
+}
+.link__none{
+    display: none;
+}
+.link__block{
+    display: block;
+}

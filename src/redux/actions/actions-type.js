@@ -1,0 +1,4 @@
+export const SEARCH_MOVIE =  "SEARCH_MOVIE"
+export const ADD_TO_LIST= "ADD_TO_LIST"
+export const REMOVE_FROM_LIST= "REMOVE_FROM_LIST"
+export const ADD_TO_MOVIE="ADD_TO_MOVIE"

@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import './SearchBox.css';
+import { connect } from "react-redux"
+import { fetchMovie}  from "../../redux/actions/actions"
 
 class SearchBox extends Component {
     state = {
-        searchLine: ''
+        searchLine: ""
     }
     searchLineChangeHandler = (e) => {
         this.setState({ searchLine: e.target.value });
     }
     searchBoxSubmitHandler = (e) => {
         e.preventDefault();
+        this.props.dispatch(fetchMovie(this.state.searchLine))
     }
     render() {
         const { searchLine } = this.state;
@@ -39,5 +42,10 @@ class SearchBox extends Component {
         );
     }
 }
+const mapStateToProps = (state) => {
+    return {
+        movies: state.movies
+    }
+}
  
-export default SearchBox;
+export default connect(mapStateToProps)(SearchBox);
