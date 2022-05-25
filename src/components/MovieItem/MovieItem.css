@@ -29,3 +29,39 @@
     opacity: 0.9;
     transition: all 0.2s linear;
 }
+
+@media screen and (min-width:320px) and (max-width:680px) {
+    .movies {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .movies__item {
+        width: 90vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .movie-item {
+        padding: 20px;
+        background-color: #FFEEDB;
+        display: flex;
+        width: 90%;
+        justify-content: center;
+    }
+
+    .movie-item__poster {
+        height: 150px;
+        margin-right: 21px;
+    }
+
+    .movie-item__title {
+        font-weight: 500;
+        font-size: 1em;
+        margin-bottom: 14px;
+        max-width: 150px;
+    }
+
+}
