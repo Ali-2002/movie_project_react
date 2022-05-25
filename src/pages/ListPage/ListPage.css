@@ -3,10 +3,27 @@
 }
 
 .list-page__title {
-    font-size: 34px;
-    margin-bottom: 26px;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5em;
+    background-color: cornflowerblue;
+    color: orange;
+    font-weight: 900;
 }
 
 .list-page ul li {
-    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;    
+    font-size: 1.5em;
+    margin: 1em;
+    height: 10vw;
+}
+.list-page ul li a{
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
 }
