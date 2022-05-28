@@ -1,6 +1,3 @@
-import {
-  SEARCH_MOVIE
-} from "./actions-type"
 import axios from "axios"
 
 export function searchMovie(movies) {
@@ -29,30 +26,6 @@ export function removeFromList(id) {
     }
   }
 }
-
-export function getMovieInfoToState(movieDetails) {
-  return {
-    type: "GET_MOVIE_INFO_INTO_STATE",
-    payload: {
-      movieDetails: movieDetails,
-    },
-  };
-}
-
-export function getMovieInfoByImdbID(movies) {
-  return function (dispatch) {
-    let movieDetailsArray = [];
-    movies.forEach((e) => {
-      fetch(`http://www.omdbapi.com/?i=${e}&apikey=bfa19603`)
-        .then((res) => res.json())
-        .then((data) => {
-          movieDetailsArray = [...movieDetailsArray, { ...data }];
-          dispatch(getMovieInfoToState(movieDetailsArray));
-        });
-    });
-  };
-}
-
 
 
 export const fetchMovie=(name)=> {
